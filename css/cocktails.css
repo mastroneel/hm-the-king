@@ -1,0 +1,105 @@
+.cocktails {
+  text-align: center; }
+  .cocktails h1 {
+    font-size: 100px;
+    background-color: #232323;
+    border-bottom: 5px solid #ad9200;
+    margin: 0;
+    padding: 20px 0 40px 0;
+    letter-spacing: 2px; }
+  .cocktails .col-xs-2, .cocktails .col-sm-3 {
+    padding: 0;
+    margin: 0; }
+  .cocktails .cocktail-pic-1,
+  .cocktails .cocktail-pic-2,
+  .cocktails .cocktail-pic-3,
+  .cocktails .cocktail-pic-4,
+  .cocktails .cocktail-pic-5,
+  .cocktails .cocktail-pic-6,
+  .cocktails .cocktail-pic-7,
+  .cocktails .cocktail-pic-8,
+  .cocktails .cocktail-pic-9,
+  .cocktails .cocktail-pic-10,
+  .cocktails .cocktail-pic-11,
+  .cocktails .cocktail-pic-12 {
+    height: 25vw;
+    background-size: cover; }
+    .cocktails .cocktail-pic-1 .image-overlay,
+    .cocktails .cocktail-pic-2 .image-overlay,
+    .cocktails .cocktail-pic-3 .image-overlay,
+    .cocktails .cocktail-pic-4 .image-overlay,
+    .cocktails .cocktail-pic-5 .image-overlay,
+    .cocktails .cocktail-pic-6 .image-overlay,
+    .cocktails .cocktail-pic-7 .image-overlay,
+    .cocktails .cocktail-pic-8 .image-overlay,
+    .cocktails .cocktail-pic-9 .image-overlay,
+    .cocktails .cocktail-pic-10 .image-overlay,
+    .cocktails .cocktail-pic-11 .image-overlay,
+    .cocktails .cocktail-pic-12 .image-overlay {
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      padding-top: 30%;
+      transition: 0.5s; }
+      .cocktails .cocktail-pic-1 .image-overlay p,
+      .cocktails .cocktail-pic-2 .image-overlay p,
+      .cocktails .cocktail-pic-3 .image-overlay p,
+      .cocktails .cocktail-pic-4 .image-overlay p,
+      .cocktails .cocktail-pic-5 .image-overlay p,
+      .cocktails .cocktail-pic-6 .image-overlay p,
+      .cocktails .cocktail-pic-7 .image-overlay p,
+      .cocktails .cocktail-pic-8 .image-overlay p,
+      .cocktails .cocktail-pic-9 .image-overlay p,
+      .cocktails .cocktail-pic-10 .image-overlay p,
+      .cocktails .cocktail-pic-11 .image-overlay p,
+      .cocktails .cocktail-pic-12 .image-overlay p {
+        font-size: 2em;
+        text-transform: uppercase; }
+    .cocktails .cocktail-pic-1:hover .image-overlay,
+    .cocktails .cocktail-pic-2:hover .image-overlay,
+    .cocktails .cocktail-pic-3:hover .image-overlay,
+    .cocktails .cocktail-pic-4:hover .image-overlay,
+    .cocktails .cocktail-pic-5:hover .image-overlay,
+    .cocktails .cocktail-pic-6:hover .image-overlay,
+    .cocktails .cocktail-pic-7:hover .image-overlay,
+    .cocktails .cocktail-pic-8:hover .image-overlay,
+    .cocktails .cocktail-pic-9:hover .image-overlay,
+    .cocktails .cocktail-pic-10:hover .image-overlay,
+    .cocktails .cocktail-pic-11:hover .image-overlay,
+    .cocktails .cocktail-pic-12:hover .image-overlay {
+      opacity: 1;
+      transition: 0.5s; }
+  .cocktails .cocktail-pic-1 {
+    background-image: url("../img/sample-cocktail.jpg"); }
+  .cocktails .cocktail-pic-2 {
+    background-image: url("../img/sample-cocktail.jpg"); }
+  .cocktails .cocktail-pic-3 {
+    background-image: url("../img/sample-cocktail.jpg"); }
+  .cocktails .cocktail-pic-4 {
+    background-image: url("../img/sample-cocktail.jpg"); }
+  .cocktails .cocktail-pic-5 {
+    background-image: url("../img/sample-cocktail.jpg"); }
+  .cocktails .cocktail-pic-6 {
+    background-image: url("../img/sample-cocktail.jpg"); }
+  .cocktails .cocktail-pic-7 {
+    background-image: url("../img/sample-cocktail.jpg"); }
+  .cocktails .cocktail-pic-8 {
+    background-image: url("../img/sample-cocktail.jpg"); }
+
+@media (max-width: 767px) {
+  .cocktails .cocktail-pic-1,
+  .cocktails .cocktail-pic-2,
+  .cocktails .cocktail-pic-3,
+  .cocktails .cocktail-pic-4,
+  .cocktails .cocktail-pic-5,
+  .cocktails .cocktail-pic-6,
+  .cocktails .cocktail-pic-7,
+  .cocktails .cocktail-pic-8,
+  .cocktails .cocktail-pic-9,
+  .cocktails .cocktail-pic-10,
+  .cocktails .cocktail-pic-11,
+  .cocktails .cocktail-pic-12 {
+    height: 50vw; } }
+
+/*# sourceMappingURL=cocktails.css.map */

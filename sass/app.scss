@@ -1,0 +1,53 @@
+// Import node modules
+@import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import '../node_modules/font-awesome/scss/font-awesome';
+
+// Import variables
+@import 'variables';
+
+// Import fonts
+@font-face {
+  font-family: moonshiner;
+  src: url("../fonts/moonshiner.otf");
+}
+
+@font-face {
+  font-family: chevalier;
+  src: url("../fonts/chevalier.ttf");
+}
+
+@font-face {
+  font-family: avenir;
+  src: url("../fonts/avenir.otf");
+}
+
+// General styles
+h1, a {
+  font-family: 'moonshiner', serif;
+  color: $white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $yellow;
+}
+
+h2 {
+  font-family: 'chevalier', serif;
+  color: $white;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'avenir', sans-serif;
+  color: $white;
+}
+
+// Import Sass files
+@import 'nav';
+@import 'hero';
+@import 'about';
+@import 'cocktails';
+@import 'locations';
+@import 'footer';

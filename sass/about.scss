@@ -1,0 +1,105 @@
+@import 'variables';
+
+.about {
+  text-align: center;
+  background-color: $black;
+  padding-bottom: 40px;
+  min-height: 100vh;
+  border-bottom: 5px solid $yellow;
+  h1 {
+    font-size: 120px;
+    letter-spacing: 2px;
+  }
+  p {
+    width: 750px;
+    margin: 0 auto;
+    font-size: 23px;
+    line-height: 1.8;
+  }
+  img {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+}
+
+// *************
+// Media queries
+// *************
+
+@media (min-width: 1500px) {
+  .about {
+    p {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: 1800px) {
+  .about {
+    p {
+      font-size: 32px;
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (min-width: 2400px) {
+  .about {
+    p {
+      font-size: 40px;
+      width: 1000px;
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .about {
+    p {
+      width: 600px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    p {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .about {
+    h1 {
+      font-size: 90px;
+    }
+    img {
+      width: 90px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-height: 1200px){
+  .about {
+    min-height: 0;
+    padding-bottom: 100px;
+    p {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-height: 1000px){
+  .about {
+    min-height: 0;
+    padding-bottom: 70px;
+    p {
+      font-size: 27px;
+    }
+  }
+}

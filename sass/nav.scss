@@ -1,0 +1,317 @@
+@import 'variables';
+
+// ********************
+// Scroll to top button
+// ********************
+
+.scroll-to-top {
+  display: none;
+  height: 50px;
+  width: 50px;
+  background-color: $yellow;
+  border: 1px solid $yellow;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1000;
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  color: $gray;
+  &:hover {
+    color: $gray;
+  }
+  i {
+    font-size: 24px;
+    padding-top: 10px;
+  }
+}
+
+// **********
+// Mobile nav
+// **********
+/* =Variables + Placeholder
+----------------------------------------------------- */
+$toggle-stripe-2: 10px;
+$toggle-stripe-3: 20px;
+
+$navbar-background: $gray;
+$navbar-color: $yellow;
+
+$transition: .2s ease-in-out;
+
+$menu-width: 200px;
+$menu-shadow: 4px 0 16px -4px rgba(0, 0, 0, .2);
+
+%transition {
+ -webkit-transition: $transition;
+    -moz-transition: $transition;
+         transition: $transition;
+}
+
+
+/* =Navbar
+----------------------------------------------------- */
+.site-navbar {
+  display: none;
+  font-size: 14px;
+  height: 60px;
+  left: 20px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 11;
+}
+
+/* =Menu
+----------------------------------------------------- */
+.site-menu {
+  @extend %transition;
+  background: $gray;
+  bottom: 0;
+  font-size: 14px;
+  height: 100%;
+  left: -$menu-width;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  position: fixed;
+  top: 0;
+  width: $menu-width;
+}
+
+.site-menu-item {
+  > a {
+    color: $white;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    &:hover,
+    &:active {
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+}
+
+.site-menu-item.current > a {
+  color: $yellow;
+}
+
+/* =Overlay toggle
+----------------------------------------------------- */
+.toggle-overlay-checkbox {
+  display: none;
+}
+
+.toggle-overlay-label {
+  @extend %transition;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none; // Important to prevent unwanted triggering
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* Display menu overlay */
+.toggle-menu-checkbox:checked ~ .toggle-overlay-label {
+  background: rgba(0, 0, 0, .5);
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+
+/* =Menu toggle
+----------------------------------------------------- */
+.toggle-menu-checkbox,
+.toggle-menu-label {
+  display: none;
+}
+
+.toggle-menu-checkbox:checked ~ .site-menu {
+  left: 0;
+  z-index: 2;
+          box-shadow: $menu-shadow;
+     -moz-box-shadow: $menu-shadow;
+  -webkit-box-shadow: $menu-shadow;
+}
+
+
+.toggle-overlay-checkbox:checked ~ .site-menu {
+  left: -$menu-width;
+}
+
+.toggle-menu-label {
+  cursor: pointer;
+  display: block;
+  padding: 0 0 0 20px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  &:before {
+    background: $navbar-color;
+    content: "";
+    height: 4px;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 2.2em;
+    box-shadow: 0 $toggle-stripe-2 0 0 $navbar-color, 0 $toggle-stripe-3 0 0 $navbar-color;
+    -moz-box-shadow: 0 $toggle-stripe-2 0 0 $navbar-color, 0 $toggle-stripe-3 0 0 $navbar-color;
+    -webkit-box-shadow: 0 $toggle-stripe-2 0 0 $navbar-color, 0 $toggle-stripe-3 0 0 $navbar-color;
+
+  }
+
+  &:after {
+    color: $navbar-color;
+    content: "";
+    display: inline-block;
+    line-height: 1;
+    margin-top: -9px;
+    padding-right: 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    border-radius: 2px 2px 2px 2px;
+  }
+}
+
+.toggle-menu-checkbox:checked ~ .toggle-menu-label {
+  &:after {
+    content: "";
+  }
+
+  &:before {
+    background: #ccc;
+    box-shadow: 0 $toggle-stripe-2 0 0 #ccc,
+      0 $toggle-stripe-3 0 0 #ccc;
+  }
+}
+
+
+
+
+
+// Hide desktop nav for small screens and
+// Hide mobile nav for large screens
+
+@media (max-width: 870px) {
+  .nav-desktop {
+    display: none;
+  }
+  .site-navbar {
+    display: block;
+  }
+}
+
+
+
+
+
+// ***********
+// Desktop nav
+// ***********
+
+.nav-desktop {
+  width: 100%;
+  background-color: $gray;
+  padding: 15px 20px;
+  border-bottom: 5px solid $yellow;
+  img {
+    width: 180px;
+  }
+  ul {
+    list-style-type: none;
+    display: inline-flex;
+    float: right;
+    margin-top: 35px;
+    margin-right: 40px;
+    li {
+      a {
+        text-transform: uppercase;
+        font-size: 2em;
+        letter-spacing: 1px;
+        margin: 0 15px;
+        transition: 0.2s;
+        a:hover {
+          color: $yellow;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+
+// *************
+// Nav desktop
+// Media queries
+// *************
+
+@media (min-width: 1600px) {
+  .nav-desktop {
+    ul {
+      li {
+        a {
+          font-size: 2.3em;
+          margin: 0 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1980px) {
+  .nav-desktop {
+    img {
+      width: 220px;
+    }
+    ul {
+      li {
+        a {
+          font-size: 3em;
+          margin: 0 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2400px) {
+  .nav-desktop {
+    img {
+      width: 250px;
+    }
+    ul {
+      li {
+        a {
+          font-size: 4em;
+          margin: 0 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1074px) {
+  .nav-desktop {
+    ul {
+      li {
+        a {
+          font-size: 1.7em;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}
