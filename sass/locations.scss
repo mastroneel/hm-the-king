@@ -1,0 +1,385 @@
+@import 'variables';
+
+// ***************
+// General styling
+// ***************
+
+.locations {
+  text-align: center;
+  background:
+      -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("../img/floral-background.jpg");
+  background:
+      -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("../img/floral-background.jpg");
+  background:
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("../img/floral-background.jpg");
+  min-height: 100vh;
+  padding-bottom: 60px;
+  h1 {
+    font-size: 100px;
+    letter-spacing: 2px;
+  }
+  img {
+    width: 150px;
+    margin-top: -15px;
+    margin-bottom: 40px;
+  }
+}
+
+// *************
+// Media queries
+// *************
+
+@media (min-width: 2500px) {
+  .locations {
+    padding-bottom: 100px;
+  }
+}
+
+
+// *********************
+// Store locator styling
+// *********************
+
+#map-canvas, #panel {
+  height: 500px;
+}
+
+#map-canvas {
+  width: 90%;
+  margin-left: 70px;
+}
+
+#panel {
+  width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  h4 {
+    font-family: 'avenir', sans-serif;
+    font-size: 21px;
+  }
+  ul {
+    list-style: none;
+    li {
+      color: $white;
+      font-family: 'avenir', sans-serif;
+      font-size: 25px;
+      letter-spacing: 1px;
+      text-align: left;
+      margin-top: 40px;
+      line-height: 25px;
+    }
+    li::before{
+       content: '';
+       display: inline-block;
+       width: 15px;
+       height: 15px;
+       -moz-border-radius: 7.5px;
+       -webkit-border-radius: 7.5px;
+       border-radius: 7.5px;
+       background-color: $yellow;
+       margin-left: -25px;
+       margin-bottom: -30px;
+    }
+    li.no-stores {
+      margin-left: -30px;
+    }
+    li.no-stores::before {
+      content: '';
+      background-color: transparent;
+    }
+  }
+}
+
+.location-search {
+  h4 {
+    color: $white;
+    font-family: 'avenir', sans-serif;
+  }
+}
+
+.storelocator-panel {
+  overflow: auto;
+}
+
+.storelocator-panel .location-search input {
+  width: 350px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid $yellow;
+  border-radius: 3px;
+  color: $yellow;
+  padding-left: 8px;
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-input-placeholder {
+    visibility: hidden;
+  color: $yellow !important;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+  color: $yellow !important;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+  color: $yellow !important;
+  }
+
+  &:-ms-input-placeholder {
+  color: $yellow !important;
+  }
+}
+
+input.directions-to {
+  border: 2px solid $yellow;
+  border-radius: 3px;
+  background: none;
+  margin-top: 15px;
+  height: 30px;
+  color: $yellow;
+  padding-left: 8px;
+  width: 175px;
+}
+
+.directions-panel {
+  form {
+    input[type="submit"] {
+      margin-top: 15px;
+      background-color: $yellow;
+      border: 1px solid $yellow;
+      color: $white;
+      border-radius: 3px;
+      padding: 5px 15px;
+      margin-right: 5px;
+      font-family: 'Myriad';
+      margin-left: 10px;
+    }
+    .close-directions {
+      margin-top: 15px;
+      background-color: $yellow;
+      border: 1px solid $yellow;
+      height: 30px;
+      color: white;
+      border-radius: 3px;
+      padding: 7px 10px;
+      margin-left: 5px;
+    }
+  }
+}
+
+a.action, a.action:visited {
+  color: $yellow;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.adp, .adp table {
+  background-color: $white;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+
+.storelocator-panel .store-list .no-stores {
+  color: grey;
+}
+
+.store {
+  .title {
+    padding-top: 5px;
+  }
+}
+
+.store .action {
+  font-size: 0.8em;
+  margin-right: 0.5em;
+}
+
+.show-more {
+  display: none;
+}
+
+.storelocator-filter {
+  position: absolute;
+  margin-top: -90px
+}
+
+// *************
+// Media queries
+// *************
+
+
+
+@media (max-width: 1032px) {
+  #panel {
+    width: 300px;
+  }
+  .storelocator-panel .location-search input {
+    width: 280px;
+  }
+}
+
+
+@media (max-width: 987px) {
+  #map-canvas {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 767px) {
+  #panel {
+    margin-top: 70px;
+    max-height: 420px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #panel {
+    max-height: 600px;
+  }
+}
+
+@media (min-width: 1900px) {
+  #panel {
+    max-height: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  #map-canvas {
+    width: 60%;
+    height: 400px;
+  }
+  #panel {
+    margin-top: 40px;
+  }
+  .storelocator-filter {
+    position: static;
+    margin-top: 10px;
+  }
+  .show-more {
+    display: block;
+    margin: 30px auto 0 auto;
+    font-size: 14px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border: 2px solid $yellow;
+    width: 170px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  #panel.tall {
+    height: 1550px;
+  }
+  #panel {
+    margin-top: 40px;
+    height: 600px;
+    li.store:nth-of-type(4),
+    li.store:nth-of-type(5),
+    li.store:nth-of-type(6),
+    li.store:nth-of-type(7),
+    li.store:nth-of-type(8),
+    li.store:nth-of-type(9),
+    li.store:nth-of-type(10) {
+       display: none;
+    }
+    li.store:nth-of-type(4).visible,
+    li.store:nth-of-type(5).visible,
+    li.store:nth-of-type(6).visible,
+    li.store:nth-of-type(7).visible,
+    li.store:nth-of-type(8).visible,
+    li.store:nth-of-type(9).visible,
+    li.store:nth-of-type(10).visible {
+      display: block;
+    }
+  }
+}
+
+
+@media (max-width: 660px) {
+  #map-canvas {
+    width: 80%;
+  }
+}
+
+@media (max-width: 540px) {
+  #map-canvas {
+    width: 90%;
+  }
+}
+
+@media (max-width: 429px) {
+  #map-canvas {
+    width: 95%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 375px) {
+  #map-canvas {
+    width: 98%;
+    height: 290px;
+  }
+}
+
+@media (max-width: 330px) {
+  .store .action {
+    font-size: 0.7em;
+    margin-right: 0.5em;
+  }
+}
+
+
+
+// **************
+// Height
+// Media queries
+// **************
+
+@media (width: 768px) and (height: 1024px) {
+  .locations {
+    min-height: 0;
+  }
+}
+
+@media (width: 1024px) and (height: 1366px) {
+  .locations {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 1200px) and (min-height: 1050px) {
+    #map-canvas {
+      width: 90%;
+      height: 700px;
+    }
+    #panel {
+      width: 600px;
+      height: 700px;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 1200px) {
+    #map-canvas {
+      width: 90%;
+      height: 800px;
+    }
+    #panel {
+      width: 700px;
+      height: 800px;
+    }
+}
+
+@media (min-height: 1300px) {
+    #map-canvas {
+      margin-top: 30px
+    }
+    #panel {
+      margin-top: 150px;
+    }
+}

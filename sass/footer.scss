@@ -1,0 +1,17 @@
+@import 'variables';
+
+.footer {
+  text-align: center;
+  background-color: $gray;
+  padding-top: 70px;
+  img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  p, a {
+    font-family: 'avenir', sans-serif;
+  }
+  .facebook {
+    font-size: 30px;
+  }
+}

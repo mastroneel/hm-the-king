@@ -1,0 +1,189 @@
+.contact {
+  text-align: center;
+  min-height: 100vh;
+  padding: 0 100px 90px 100px;
+  h1 {
+    color: $gray;
+    font-size: 100px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    text-transform: none;
+  }
+  hr {
+    width: 11em;
+  }
+  .address {
+    h1 {
+      font-size: 100px;
+      color: $gray;
+    }
+    h3 {
+      color: $gray;
+      font-family: 'moonshiner', serif;
+      font-size: 30px;
+      margin-top: -10px;
+    }
+    h3, p {
+      text-align: left;
+      margin-left: 50px;
+    }
+    p {
+      color: $gray;
+      font-size: 24px;
+    }
+  }
+  form {
+    width: 80%;
+    text-align: left;
+    float: right;
+    margin-right: 50px;
+    margin-top: -10px;
+    p {
+      text-transform: uppercase;
+      color: $gray;
+      margin-top: 15px;
+      margin-bottom: -5px;
+      font-size: 20px;
+    }
+    input, select {
+      background-color: $white;
+      border: 3px solid $yellow;
+      border-radius: 3px;
+      height: 40px;
+      width: 100%;
+      color: $gray;
+      font-family: 'avenir', sans-serif;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .button-container {
+    text-align: center;
+    margin-top: 30px;
+    .button {
+      padding: 10px 40px;
+      background-color: $gray;
+      border: 1px solid $gray;
+      border-radius: 3px;
+      color: $white;
+      font-family: 'avenir', sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+  .office-map {
+    height: 300px;
+    display:inline-block;
+    overflow:hidden;
+    float: left;
+    margin-left: 50px;
+  }
+}
+
+// *************
+// Media queries
+// *************
+
+@media (min-width: 2500px) {
+  .contact {
+    form {
+      p {
+        font-size: 30px;
+      }
+      input {
+        height: 50px;
+      }
+    }
+    .button-container {
+      .button {
+        font-size: 30px;
+      }
+    }
+    .address {
+      h3, p {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1069px) {
+  .contact {
+    padding: 0 20px 80px 20px;
+    form {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 922px) {
+  .contact {
+    .address {
+      h3, p {
+        font-size: 20px;
+      }
+    }
+    form {
+      width: 90%;
+      margin: 0 auto;
+      float: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 0;
+    .address {
+      width: 100%;
+      margin-top: 50px;
+      h3, p {
+        margin-left: 0;
+        text-align: center;
+      }
+      h3 {
+        font-size: 25px;
+      }
+    }
+    .office-map {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .contact {
+    .office-map {
+      width: 290px;
+    }
+  }
+}
+
+
+// **************
+// Height
+// Media queries
+// **************
+
+@media (min-width: 1200px) and (min-height: 1050px) {
+  .contact {
+    min-height: 0;
+  }
+}
+
+@media (width: 1024px) and (height: 1366px) {
+  .contact {
+    min-height: 0;
+  }
+}
+
+@media (width: 768px) and (height: 1024px) {
+  .contact {
+    min-height: 0;
+  }
+}
