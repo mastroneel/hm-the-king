@@ -8139,6 +8139,13 @@ button.close {
 @font-face {
   font-family: avenir;
   src: url("../fonts/avenir.otf"); }
+@font-face {
+  font-family: avenirmed;
+  src: url("../fonts/avenir-medium.otf"); }
+.row {
+  margin: 0;
+  padding: 0; }
+
 h1, a {
   font-family: 'moonshiner', serif;
   color: #fff;
@@ -8477,6 +8484,8 @@ p {
     margin: 0;
     padding: 20px 0 40px 0;
     letter-spacing: 2px; }
+  .cocktails .col-xs-12 {
+    padding: 0; }
   .cocktails .col-xs-2, .cocktails .col-sm-3 {
     padding: 0;
     margin: 0; }
@@ -8493,6 +8502,9 @@ p {
   .cocktails .cocktail-pic-11,
   .cocktails .cocktail-pic-12 {
     height: 25vw;
+    width: 100%;
+    padding: 0;
+    margin: 0;
     background-size: cover; }
     .cocktails .cocktail-pic-1 .image-overlay,
     .cocktails .cocktail-pic-2 .image-overlay,
@@ -8524,7 +8536,7 @@ p {
       .cocktails .cocktail-pic-10 .image-overlay p,
       .cocktails .cocktail-pic-11 .image-overlay p,
       .cocktails .cocktail-pic-12 .image-overlay p {
-        font-size: 2em;
+        font-size: 3em;
         text-transform: uppercase; }
     .cocktails .cocktail-pic-1:hover .image-overlay,
     .cocktails .cocktail-pic-2:hover .image-overlay,
@@ -8541,22 +8553,82 @@ p {
       opacity: 1;
       transition: 0.5s; }
   .cocktails .cocktail-pic-1 {
-    background-image: url("../img/sample-cocktail.jpg"); }
+    background-image: url("../img/northern-lights.jpg"); }
   .cocktails .cocktail-pic-2 {
-    background-image: url("../img/sample-cocktail.jpg"); }
+    background-image: url("../img/hm-spice.jpg"); }
   .cocktails .cocktail-pic-3 {
-    background-image: url("../img/sample-cocktail.jpg"); }
+    background-image: url("../img/sovereign.jpg"); }
   .cocktails .cocktail-pic-4 {
-    background-image: url("../img/sample-cocktail.jpg"); }
+    background-image: url("../img/ginger-king.jpg"); }
   .cocktails .cocktail-pic-5 {
-    background-image: url("../img/sample-cocktail.jpg"); }
+    background-image: url("../img/hm-sunrise.jpg"); }
   .cocktails .cocktail-pic-6 {
-    background-image: url("../img/sample-cocktail.jpg"); }
+    background-image: url("../img/mac-daddy.jpg"); }
   .cocktails .cocktail-pic-7 {
-    background-image: url("../img/sample-cocktail.jpg"); }
+    background-image: url("../img/hm-bell-pepper.jpg"); }
   .cocktails .cocktail-pic-8 {
-    background-image: url("../img/sample-cocktail.jpg"); }
+    background-image: url("../img/blood-and-sand.jpg"); }
+  .cocktails .modal-dialog {
+    width: 65%;
+    border-radius: 2px;
+    margin: 0 auto; }
+    .cocktails .modal-dialog .modal-content {
+      padding: 30px; }
+      .cocktails .modal-dialog .modal-content .modal-body {
+        border: 3px solid #ad9200;
+        border-radius: 3px;
+        padding: 10px 10px 30px 10px;
+        font-family: 'avenirmed', sans-serif;
+        font-weight: bold;
+        color: #232323; }
+        .cocktails .modal-dialog .modal-content .modal-body h5 {
+          color: #232323;
+          margin-top: 20px;
+          font-size: 15px; }
+        .cocktails .modal-dialog .modal-content .modal-body .prev-next {
+          color: #ad9200;
+          background-color: #fff;
+          border: 1px solid #fff;
+          font-size: 50px;
+          margin-top: 120px;
+          transition: 0.2s; }
+          .cocktails .modal-dialog .modal-content .modal-body .prev-next:hover {
+            color: #ad9200;
+            transition: 0.2s; }
+          .cocktails .modal-dialog .modal-content .modal-body .prev-next:focus {
+            outline: none; }
+        .cocktails .modal-dialog .modal-content .modal-body .prev {
+          float: left; }
+        .cocktails .modal-dialog .modal-content .modal-body .next {
+          float: right; }
+        .cocktails .modal-dialog .modal-content .modal-body ul, .cocktails .modal-dialog .modal-content .modal-body ol {
+          text-align: left;
+          color: #232323;
+          line-height: 1.5;
+          padding: 0; }
+          .cocktails .modal-dialog .modal-content .modal-body ul li, .cocktails .modal-dialog .modal-content .modal-body ol li {
+            font-size: 15px; }
+        .cocktails .modal-dialog .modal-content .modal-body img {
+          width: 80%;
+          margin-top: 30px; }
+        .cocktails .modal-dialog .modal-content .modal-body .logo {
+          max-width: 170px;
+          margin-top: 20px; }
 
+@media (max-width: 1070px) {
+  .cocktails .cocktail-pic-1 .image-overlay p,
+  .cocktails .cocktail-pic-2 .image-overlay p,
+  .cocktails .cocktail-pic-3 .image-overlay p,
+  .cocktails .cocktail-pic-4 .image-overlay p,
+  .cocktails .cocktail-pic-5 .image-overlay p,
+  .cocktails .cocktail-pic-6 .image-overlay p,
+  .cocktails .cocktail-pic-7 .image-overlay p,
+  .cocktails .cocktail-pic-8 .image-overlay p,
+  .cocktails .cocktail-pic-9 .image-overlay p,
+  .cocktails .cocktail-pic-10 .image-overlay p,
+  .cocktails .cocktail-pic-11 .image-overlay p,
+  .cocktails .cocktail-pic-12 .image-overlay p {
+    font-size: 2em; } }
 @media (max-width: 767px) {
   .cocktails .cocktail-pic-1,
   .cocktails .cocktail-pic-2,
@@ -8571,6 +8643,111 @@ p {
   .cocktails .cocktail-pic-11,
   .cocktails .cocktail-pic-12 {
     height: 50vw; } }
+@media (max-width: 380px) {
+  .cocktails .cocktail-pic-1 .image-overlay p,
+  .cocktails .cocktail-pic-2 .image-overlay p,
+  .cocktails .cocktail-pic-3 .image-overlay p,
+  .cocktails .cocktail-pic-4 .image-overlay p,
+  .cocktails .cocktail-pic-5 .image-overlay p,
+  .cocktails .cocktail-pic-6 .image-overlay p,
+  .cocktails .cocktail-pic-7 .image-overlay p,
+  .cocktails .cocktail-pic-8 .image-overlay p,
+  .cocktails .cocktail-pic-9 .image-overlay p,
+  .cocktails .cocktail-pic-10 .image-overlay p,
+  .cocktails .cocktail-pic-11 .image-overlay p,
+  .cocktails .cocktail-pic-12 .image-overlay p {
+    font-size: 1.8em; } }
+@media (max-width: 992px) {
+  .cocktails .modal-dialog {
+    width: 80%; }
+    .cocktails .modal-dialog .modal-content .modal-body {
+      text-align: center; }
+      .cocktails .modal-dialog .modal-content .modal-body img {
+        width: 50%;
+        margin-top: -15%; }
+      .cocktails .modal-dialog .modal-content .modal-body h4 {
+        font-size: 1.5em; }
+      .cocktails .modal-dialog .modal-content .modal-body ul, .cocktails .modal-dialog .modal-content .modal-body ol {
+        width: 90%;
+        margin: 0 auto; }
+        .cocktails .modal-dialog .modal-content .modal-body ul li, .cocktails .modal-dialog .modal-content .modal-body ol li {
+          font-size: 14px; }
+      .cocktails .modal-dialog .modal-content .modal-body h5 {
+        text-align: left; } }
+@media (max-width: 797px) {
+  .cocktails .modal-dialog .modal-content .modal-body {
+    padding: 15px; } }
+@media (max-width: 710px) {
+  .cocktails .modal-dialog {
+    width: 90%; } }
+@media (max-width: 435px) {
+  .cocktails .modal-dialog .modal-content {
+    padding: 15px; }
+    .cocktails .modal-dialog .modal-content .modal-body h4 {
+      font-size: 18px; }
+    .cocktails .modal-dialog .modal-content .modal-body img {
+      width: 90%;
+      margin-top: -15%; }
+    .cocktails .modal-dialog .modal-content .modal-body ul, .cocktails .modal-dialog .modal-content .modal-body ol {
+      font-size: 0.9em; } }
+@media (max-width: 992px) {
+  .cocktails .modal-dialog .modal-content .modal-body .prev-next-lg-screens {
+    display: none; } }
+@media (min-width: 992px) {
+  .cocktails .modal-dialog .modal-content .modal-body .prev-next-sm-screens {
+    display: none; } }
+@media (max-width: 560px) {
+  .cocktails .modal-dialog .modal-content .modal-body .col-xs-1 {
+    padding: 0; }
+  .cocktails .modal-dialog .modal-content .modal-body .prev-next {
+    font-size: 25px; } }
+@media (min-width: 1500px) and (min-height: 1050px) {
+  .cocktails .modal-dialog .modal-content {
+    padding: 25px; }
+    .cocktails .modal-dialog .modal-content .modal-body .logo {
+      width: 200px;
+      max-width: 250px;
+      margin-top: 40px; }
+    .cocktails .modal-dialog .modal-content .modal-body .prev-next {
+      margin-top: 200px; }
+    .cocktails .modal-dialog .modal-content .modal-body h5 {
+      font-size: 20px; }
+    .cocktails .modal-dialog .modal-content .modal-body h4 {
+      font-size: 50px; }
+    .cocktails .modal-dialog .modal-content .modal-body ul li, .cocktails .modal-dialog .modal-content .modal-body ol li {
+      font-size: 20px; } }
+@media (min-width: 1500px) and (min-height: 1200px) {
+  .cocktails .modal-dialog .modal-content {
+    padding: 25px; }
+    .cocktails .modal-dialog .modal-content .modal-body .prev-next {
+      margin-top: 250px;
+      font-size: 70px; }
+    .cocktails .modal-dialog .modal-content .modal-body .logo {
+      width: 250px;
+      max-width: 300px;
+      margin-top: 60px; }
+    .cocktails .modal-dialog .modal-content .modal-body h5 {
+      font-size: 28px; }
+    .cocktails .modal-dialog .modal-content .modal-body h4 {
+      font-size: 70px; }
+    .cocktails .modal-dialog .modal-content .modal-body ul li, .cocktails .modal-dialog .modal-content .modal-body ol li {
+      font-size: 28px; } }
+@media (min-width: 1500px) and (min-height: 1300px) {
+  .cocktails .modal-dialog .modal-content {
+    padding: 25px; }
+    .cocktails .modal-dialog .modal-content .modal-body .prev-next {
+      font-size: 90px;
+      margin-top: 300px; }
+    .cocktails .modal-dialog .modal-content .modal-body .logo {
+      width: 300px;
+      max-width: 300px;
+      margin-top: 80px; }
+    .cocktails .modal-dialog .modal-content .modal-body h5 {
+      font-size: 40px; }
+    .cocktails .modal-dialog .modal-content .modal-body h4 {
+      font-size: 80px; }
+    .cocktails .modal-dialog .modal-content .modal-body ul li, .cocktails .modal-dialog .modal-content .modal-body ol li {
+      font-size: 35px; } }
 .locations {
   text-align: center;
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/floral-background.jpg");

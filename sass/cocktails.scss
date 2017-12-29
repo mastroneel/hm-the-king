@@ -10,6 +10,9 @@
     padding: 20px 0 40px 0;
     letter-spacing: 2px;
   }
+  .col-xs-12 {
+    padding: 0;
+  }
   .col-xs-2, .col-sm-3 {
     padding: 0;
     margin: 0;
@@ -27,6 +30,9 @@
   .cocktail-pic-11,
   .cocktail-pic-12 {
     height: 25vw;
+    width: 100%;
+    padding: 0;
+    margin: 0;
     background-size: cover;
     .image-overlay {
       opacity: 0;
@@ -36,7 +42,7 @@
       padding-top: 30%;
       transition: 0.5s;
       p {
-        font-size: 2em;
+        font-size: 3em;
         text-transform: uppercase;
       }
     }
@@ -48,34 +54,117 @@
     }
   }
   .cocktail-pic-1 {
-    background-image: url('../img/sample-cocktail.jpg');
+    background-image: url('../img/northern-lights.jpg');
   }
   .cocktail-pic-2 {
-    background-image: url('../img/sample-cocktail.jpg');
+    background-image: url('../img/hm-spice.jpg');
   }
   .cocktail-pic-3 {
-    background-image: url('../img/sample-cocktail.jpg');
+    background-image: url('../img/sovereign.jpg');
   }
   .cocktail-pic-4 {
-    background-image: url('../img/sample-cocktail.jpg');
+    background-image: url('../img/ginger-king.jpg');
   }
   .cocktail-pic-5 {
-    background-image: url('../img/sample-cocktail.jpg');
+    background-image: url('../img/hm-sunrise.jpg');
   }
   .cocktail-pic-6 {
-    background-image: url('../img/sample-cocktail.jpg');
+    background-image: url('../img/mac-daddy.jpg');
   }
   .cocktail-pic-7 {
-    background-image: url('../img/sample-cocktail.jpg');
+    background-image: url('../img/hm-bell-pepper.jpg');
   }
   .cocktail-pic-8 {
-    background-image: url('../img/sample-cocktail.jpg');
+    background-image: url('../img/blood-and-sand.jpg');
+  }
+  // Modal
+  .modal-dialog {
+    width: 65%;
+    border-radius: 2px;
+    margin: 0 auto;
+    .modal-content {
+      padding: 30px;
+      .modal-body {
+        border: 3px solid $yellow;
+        border-radius: 3px;
+        padding: 10px 10px 30px 10px;
+        font-family: 'avenirmed', sans-serif;
+        font-weight: bold;
+        color: $gray;
+        h5 {
+          color: $gray;
+          margin-top: 20px;
+          font-size: 15px;
+        }
+        .prev-next {
+          color: $yellow;
+          background-color: $white;
+          border: 1px solid $white;
+          font-size: 50px;
+          margin-top: 120px;
+          transition: 0.2s;
+          &:hover {
+            color: $yellow;
+            transition: 0.2s;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        .prev {
+          float: left;
+        }
+        .next {
+          float: right;
+        }
+        ul, ol {
+          text-align: left;
+          color: $gray;
+          line-height: 1.5;
+          padding: 0;
+          li {
+            font-size: 15px;;
+          }
+        }
+        img {
+          width: 80%;
+          margin-top: 30px;
+        }
+        .logo {
+          max-width: 170px;
+          margin-top: 20px;
+        }
+      }
+    }
   }
 }
 
 // *************
 // Media queries
 // *************
+
+@media (max-width: 1070px) {
+  .cocktails {
+    .cocktail-pic-1,
+    .cocktail-pic-2,
+    .cocktail-pic-3,
+    .cocktail-pic-4,
+    .cocktail-pic-5,
+    .cocktail-pic-6,
+    .cocktail-pic-7,
+    .cocktail-pic-8,
+    .cocktail-pic-9,
+    .cocktail-pic-10,
+    .cocktail-pic-11,
+    .cocktail-pic-12 {
+      .image-overlay {
+        p {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 767px) {
   .cocktails {
@@ -92,6 +181,257 @@
     .cocktail-pic-11,
     .cocktail-pic-12 {
       height: 50vw;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .cocktails {
+    .cocktail-pic-1,
+    .cocktail-pic-2,
+    .cocktail-pic-3,
+    .cocktail-pic-4,
+    .cocktail-pic-5,
+    .cocktail-pic-6,
+    .cocktail-pic-7,
+    .cocktail-pic-8,
+    .cocktail-pic-9,
+    .cocktail-pic-10,
+    .cocktail-pic-11,
+    .cocktail-pic-12 {
+      .image-overlay {
+        p {
+          font-size: 1.8em;
+        }
+      }
+    }
+  }
+}
+
+// ***********************
+// Media queries for modal
+// ***********************
+
+
+@media (max-width: 992px) {
+  .cocktails {
+    .modal-dialog {
+      width: 80%;
+      .modal-content {
+        .modal-body {
+          text-align: center;
+          img {
+            width: 50%;
+            margin-top: -15%;
+          }
+          h4 {
+            font-size: 1.5em;
+          }
+          ul, ol {
+            width: 90%;
+            margin: 0 auto;
+            li {
+              font-size: 14px;
+            }
+          }
+          h5 {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 797px) {
+  .cocktails {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .cocktails {
+    .modal-dialog {
+      width: 90%;
+      .modal-content {
+        .modal-body {
+          img {
+            // width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .cocktails {
+    .modal-dialog {
+      .modal-content {
+        padding: 15px;
+        .modal-body {
+          h4 {
+            font-size: 18px;
+          }
+          img {
+            width: 90%;
+            margin-top: -15%;
+          }
+          ul, ol {
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .cocktails {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          .prev-next-lg-screens {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .cocktails {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          .prev-next-sm-screens {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .cocktails {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          .col-xs-1 {
+            padding: 0;
+          }
+          .prev-next {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ******************************
+// Height media queries for modal
+// ******************************
+@media (min-width: 1500px) and (min-height: 1050px) {
+  .cocktails {
+    .modal-dialog {
+      .modal-content {
+        padding: 25px;
+        .modal-body {
+          .logo {
+            width: 200px;
+            max-width: 250px;
+            margin-top: 40px;
+          }
+          .prev-next {
+            margin-top: 200px;
+          }
+          h5 {
+            font-size: 20px;
+          }
+          h4 {
+            font-size: 50px;
+          }
+          ul, ol {
+            li {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) and (min-height: 1200px) {
+  .cocktails {
+    .modal-dialog {
+      .modal-content {
+        padding: 25px;
+        .modal-body {
+          .prev-next {
+            margin-top: 250px;
+            font-size: 70px;
+          }
+          .logo {
+            width: 250px;
+            max-width: 300px;
+            margin-top: 60px;
+          }
+          h5 {
+            font-size: 28px;
+          }
+          h4 {
+            font-size: 70px;
+          }
+          ul, ol {
+            li {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1500px) and (min-height: 1300px) {
+  .cocktails {
+    .modal-dialog {
+      .modal-content {
+        padding: 25px;
+        .modal-body {
+          .prev-next {
+            font-size: 90px;
+            margin-top: 300px;
+          }
+          .logo {
+            width: 300px;
+            max-width: 300px;
+            margin-top: 80px;
+          }
+          h5 {
+            font-size: 40px;
+          }
+          h4 {
+            font-size: 80px;
+          }
+          ul, ol {
+            li {
+              font-size: 35px;
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -21,7 +21,17 @@
   src: url("../fonts/avenir.otf");
 }
 
+@font-face {
+  font-family: avenirmed;
+  src: url("../fonts/avenir-medium.otf");
+}
+
 // General styles
+.row {
+  margin: 0;
+  padding: 0;
+}
+
 h1, a {
   font-family: 'moonshiner', serif;
   color: $white;
