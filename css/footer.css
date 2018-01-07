@@ -8,6 +8,7 @@
   .footer p, .footer a {
     font-family: 'avenir', sans-serif; }
   .footer .facebook {
-    font-size: 30px; }
+    font-size: 30px;
+    margin: 5px; }
 
 /*# sourceMappingURL=footer.css.map */

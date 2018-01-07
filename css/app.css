@@ -9130,6 +9130,7 @@ a.action, a.action:visited {
   .footer p, .footer a {
     font-family: 'avenir', sans-serif; }
   .footer .facebook {
-    font-size: 30px; }
+    font-size: 30px;
+    margin: 5px; }
 
 /*# sourceMappingURL=app.css.map */
