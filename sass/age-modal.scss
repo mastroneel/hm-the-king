@@ -1,0 +1,317 @@
+@import 'variables';
+
+.agemodal {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  .overlay {
+    background-color: #000;
+    height: 100%;
+    opacity: 0.5;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+  }
+  .message {
+    overflow: hidden;
+    border-radius: 3px;
+    bottom: 0;
+    -webkit-box-shadow: 12px 12px 10px 1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 12px 12px 10px 1px rgba(0,0,0,0.6);
+    box-shadow: 12px 12px 10px 1px rgba(0,0,0,0.6);
+    height: 80%;
+    max-height: 600px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    max-width: 1000px;
+    z-index: 101;
+    padding: 30px;
+    background-color: $gray;
+    .message-inner {
+      overflow: hidden;
+      border: 3px solid $yellow;
+      border-radius: 3px;
+      text-align: center;
+      height: 100%;
+      padding: 10px;
+      h1 {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      p {
+        color: $white;
+        font-size: 20px;
+      }
+      form {
+        select {
+          border: 3px solid $yellow;
+          background: transparent;
+          font-size: 20px;
+          color: $yellow;
+          font-weight: bold;
+          height: 45px;
+          border-radius: 1px;
+          margin: 10px;
+          &:focus {
+            outline: none;
+          }
+        }
+        select.whiteText {
+          color: $white;
+        }
+        .remember {
+          margin: 15px 0;
+          label {
+            color: $white;
+            margin-left: 20px;
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: -8px;
+          }
+          input[type=checkbox] {
+              position: relative;
+              text-align: center;
+          }
+          @supports (zoom:2) {
+            input[type=checkbox]{
+            zoom: 2;
+            margin-top: -20px;
+            }
+          }
+          @supports not (zoom:2) {
+            input[type=checkbox]{
+              transform: scale(2);
+            }
+          }
+        }
+        .formsubmit {
+          border:1px solid $yellow;
+          background-color: $yellow;
+          border-radius: 3px;
+          display: block;
+          color: $white;
+          cursor: pointer;
+          font-family: 'avenir', sans-serif;
+          font-size: 26px;
+          padding: 10px 5px 5px 5px;
+          text-decoration:none;
+          text-align:center;
+          transition: .3s;
+          width: 38%;
+          margin: 0 auto;
+          &:hover {
+            background-color: $white;
+            border: 1px solid $white;
+            color: $yellow;
+            transition: .3s;
+          }
+          &:active {
+            position:relative;
+            top:1px;
+          }
+        }
+      }
+    }
+    img {
+      width: 170px;
+      margin-top: 30px;
+    }
+  }
+}
+
+
+// *************
+// Media queries
+// *************
+
+@media (max-width: 782px) {
+  .agemodal {
+    .message {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 693px) {
+  .agemodal {
+    .message {
+      width: 95%;
+      // height: 95%;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .agemodal {
+    .message {
+      .message-inner {
+        h1 {
+          font-size: 50px;
+        }
+        p {
+          font-size: 16px;
+        }
+        form {
+          // select {
+          //   height: 50px;
+          //   font-size: 24px;
+          // }
+          .formsubmit {
+            font-size: 20px;
+            width: 60%;
+          }
+        }
+      }
+      img {
+        // width: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .agemodal {
+    .message {
+      padding: 15px;
+      .message-inner {
+        h1 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 14px;
+        }
+        form {
+          select {
+            height: 35px;
+            font-size: 18px;
+            margin: 5px;
+          }
+          .remember {
+            label {
+              font-size: 15px;
+              margin-top: -7px;
+            }
+          }
+          .formsubmit {
+            font-size: 18px;
+            width: 70%;
+          }
+        }
+      }
+      img {
+        width: 175px;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  .agemodal {
+    .message {
+      height: 90%;
+      .message-inner {
+        img {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 523px) {
+  .agemodal {
+    .message {
+      .message-inner {
+        img {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 494px) {
+  .agemodal {
+    .message {
+      .message-inner {
+        h1 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 20px;
+        }
+        form {
+          select {
+            // font-size: 25px;
+            height: 30px;
+          }
+          .remember {
+            label {
+              font-size: 14px;
+              margin-top: -3px;
+            }
+          }
+          .formsubmit {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 447px) {
+  .agemodal {
+    .message {
+      .message-inner {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 355px) {
+  .agemodal {
+    .message {
+      padding: 10px;
+      .message-inner {
+        h1 {
+          font-size: 36px;
+        }
+        p {
+          font-size: 18px;
+        }
+        form {
+          select {
+            font-size: 25px;
+            height: 30px;
+          }
+          .remember {
+            label {
+              font-size: 14px;
+              margin-top: -3px;
+            }
+          }
+          .formsubmit {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

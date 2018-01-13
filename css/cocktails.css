@@ -1,11 +1,11 @@
 .cocktails {
   text-align: center; }
   .cocktails h1 {
-    font-size: 100px;
+    font-size: 80px;
     background-color: #232323;
     border-bottom: 5px solid #ad9200;
     margin: 0;
-    padding: 20px 0 40px 0;
+    padding: 0 0 20px 0;
     letter-spacing: 2px; }
   .cocktails .col-xs-12 {
     padding: 0; }
@@ -24,11 +24,12 @@
   .cocktails .cocktail-pic-10,
   .cocktails .cocktail-pic-11,
   .cocktails .cocktail-pic-12 {
-    height: 25vw;
+    height: 21vw;
     width: 100%;
     padding: 0;
     margin: 0;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center top; }
     .cocktails .cocktail-pic-1 .image-overlay,
     .cocktails .cocktail-pic-2 .image-overlay,
     .cocktails .cocktail-pic-3 .image-overlay,
@@ -137,6 +138,8 @@
         .cocktails .modal-dialog .modal-content .modal-body .logo {
           max-width: 170px;
           margin-top: 20px; }
+  .cocktails #modal7 ul li, .cocktails #modal7 ol li {
+    font-size: 12px; }
 
 @media (max-width: 1070px) {
   .cocktails .cocktail-pic-1 .image-overlay p,

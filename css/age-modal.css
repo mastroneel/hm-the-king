@@ -1,0 +1,183 @@
+.agemodal {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+  .agemodal .overlay {
+    background-color: #000;
+    height: 100%;
+    opacity: 0.5;
+    position: relative;
+    width: 100%;
+    z-index: 100; }
+  .agemodal .message {
+    overflow: hidden;
+    border-radius: 3px;
+    bottom: 0;
+    -webkit-box-shadow: 12px 12px 10px 1px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 12px 12px 10px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 12px 12px 10px 1px rgba(0, 0, 0, 0.6);
+    height: 80%;
+    max-height: 600px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    max-width: 1000px;
+    z-index: 101;
+    padding: 30px;
+    background-color: #232323; }
+    .agemodal .message .message-inner {
+      overflow: hidden;
+      border: 3px solid #ad9200;
+      border-radius: 3px;
+      text-align: center;
+      height: 100%;
+      padding: 10px; }
+      .agemodal .message .message-inner h1 {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: 2px; }
+      .agemodal .message .message-inner p {
+        color: #fff;
+        font-size: 20px; }
+      .agemodal .message .message-inner form select {
+        border: 3px solid #ad9200;
+        background: transparent;
+        font-size: 20px;
+        color: #ad9200;
+        font-weight: bold;
+        height: 45px;
+        border-radius: 1px;
+        margin: 10px; }
+        .agemodal .message .message-inner form select:focus {
+          outline: none; }
+      .agemodal .message .message-inner form select.whiteText {
+        color: #fff; }
+      .agemodal .message .message-inner form .remember {
+        margin: 15px 0; }
+        .agemodal .message .message-inner form .remember label {
+          color: #fff;
+          margin-left: 20px;
+          font-size: 18px;
+          display: inline-block;
+          vertical-align: top;
+          margin-top: -8px; }
+        .agemodal .message .message-inner form .remember input[type=checkbox] {
+          position: relative;
+          text-align: center; }
+        @supports (zoom: 2) {
+          .agemodal .message .message-inner form .remember input[type=checkbox] {
+            zoom: 2;
+            margin-top: -20px; } }
+        @supports not (zoom: 2) {
+          .agemodal .message .message-inner form .remember input[type=checkbox] {
+            transform: scale(2); } }
+      .agemodal .message .message-inner form .formsubmit {
+        border: 1px solid #ad9200;
+        background-color: #ad9200;
+        border-radius: 3px;
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        font-family: 'avenir', sans-serif;
+        font-size: 26px;
+        padding: 10px 5px 5px 5px;
+        text-decoration: none;
+        text-align: center;
+        transition: .3s;
+        width: 38%;
+        margin: 0 auto; }
+        .agemodal .message .message-inner form .formsubmit:hover {
+          background-color: #fff;
+          border: 1px solid #fff;
+          color: #ad9200;
+          transition: .3s; }
+        .agemodal .message .message-inner form .formsubmit:active {
+          position: relative;
+          top: 1px; }
+    .agemodal .message img {
+      width: 170px;
+      margin-top: 30px; }
+
+@media (max-width: 782px) {
+  .agemodal .message {
+    width: 80%; } }
+@media (max-width: 693px) {
+  .agemodal .message {
+    width: 95%; } }
+@media (max-width: 590px) {
+  .agemodal .message .message-inner h1 {
+    font-size: 50px; }
+  .agemodal .message .message-inner p {
+    font-size: 16px; }
+  .agemodal .message .message-inner form .formsubmit {
+    font-size: 20px;
+    width: 60%; } }
+@media (max-width: 420px) {
+  .agemodal .message {
+    padding: 15px; }
+    .agemodal .message .message-inner h1 {
+      font-size: 40px; }
+    .agemodal .message .message-inner p {
+      font-size: 14px; }
+    .agemodal .message .message-inner form select {
+      height: 35px;
+      font-size: 18px;
+      margin: 5px; }
+    .agemodal .message .message-inner form .remember label {
+      font-size: 15px;
+      margin-top: -7px; }
+    .agemodal .message .message-inner form .formsubmit {
+      font-size: 18px;
+      width: 70%; }
+    .agemodal .message img {
+      width: 175px;
+      margin-top: 40px; } }
+@media (max-height: 600px) {
+  .agemodal .message {
+    height: 90%; }
+    .agemodal .message .message-inner img {
+      width: 150px; } }
+@media (max-height: 523px) {
+  .agemodal .message .message-inner img {
+    width: 100px; } }
+@media (max-height: 494px) {
+  .agemodal .message .message-inner h1 {
+    font-size: 40px; }
+  .agemodal .message .message-inner p {
+    font-size: 20px; }
+  .agemodal .message .message-inner form select {
+    height: 30px; }
+  .agemodal .message .message-inner form .remember label {
+    font-size: 14px;
+    margin-top: -3px; }
+  .agemodal .message .message-inner form .formsubmit {
+    font-size: 14px; } }
+@media (max-height: 447px) {
+  .agemodal .message .message-inner img {
+    display: none; } }
+@media (max-height: 355px) {
+  .agemodal .message {
+    padding: 10px; }
+    .agemodal .message .message-inner h1 {
+      font-size: 36px; }
+    .agemodal .message .message-inner p {
+      font-size: 18px; }
+    .agemodal .message .message-inner form select {
+      font-size: 25px;
+      height: 30px; }
+    .agemodal .message .message-inner form .remember label {
+      font-size: 14px;
+      margin-top: -3px; }
+    .agemodal .message .message-inner form .formsubmit {
+      font-size: 14px; } }
+
+/*# sourceMappingURL=age-modal.css.map */
