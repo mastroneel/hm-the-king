@@ -2,6 +2,7 @@
 
 .cocktails {
   text-align: center;
+  border-bottom: 5px solid $yellow;
   h1 {
     font-size: 80px;
     background-color: $gray;
@@ -92,6 +93,10 @@
         font-family: 'avenirmed', sans-serif;
         font-weight: bold;
         color: $gray;
+        h2 {
+          color: $gray;
+          font-family: 'avenir';
+        }
         h5 {
           color: $gray;
           margin-top: 20px;

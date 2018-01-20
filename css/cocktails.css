@@ -1,5 +1,6 @@
 .cocktails {
-  text-align: center; }
+  text-align: center;
+  border-bottom: 5px solid #ad9200; }
   .cocktails h1 {
     font-size: 80px;
     background-color: #232323;
@@ -105,6 +106,9 @@
         font-family: 'avenirmed', sans-serif;
         font-weight: bold;
         color: #232323; }
+        .cocktails .modal-dialog .modal-content .modal-body h2 {
+          color: #232323;
+          font-family: 'avenir'; }
         .cocktails .modal-dialog .modal-content .modal-body h5 {
           color: #232323;
           margin-top: 20px;
