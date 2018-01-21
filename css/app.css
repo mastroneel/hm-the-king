@@ -9329,6 +9329,52 @@ a.action, a.action:visited {
 @media (width: 768px) and (height: 1024px) {
   .contact {
     min-height: 0; } }
+.assets {
+  background-color: #000;
+  min-height: 80vh;
+  padding-bottom: 40px; }
+  .assets ul {
+    margin: 50px 0 0 40px;
+    list-style-type: none; }
+    .assets ul li a {
+      font-size: 35px;
+      font-family: 'avenir'; }
+
+.nav-assets {
+  position: relative;
+  background: #232323; }
+
+@media (min-width: 1680px) {
+  .assets ul {
+    margin: 80px 0 0 50px; }
+    .assets ul li {
+      margin-top: 25px; }
+      .assets ul li a {
+        font-size: 40px; } }
+@media (min-width: 1920px) {
+  .assets ul {
+    margin-top: 90px; }
+    .assets ul li {
+      margin-top: 25px; }
+      .assets ul li a {
+        font-size: 50px; } }
+@media (min-width: 2500px) {
+  .assets ul {
+    margin-top: 90px; }
+    .assets ul li {
+      margin-top: 25px; }
+      .assets ul li a {
+        font-size: 70px; } }
+@media (max-width: 575px) {
+  .assets ul li {
+    margin-top: 15px; }
+    .assets ul li a {
+      font-size: 25px; } }
+@media (max-width: 400px) {
+  .assets ul li {
+    margin-top: 15px; }
+    .assets ul li a {
+      font-size: 20px; } }
 .footer {
   text-align: center;
   background-color: #232323;

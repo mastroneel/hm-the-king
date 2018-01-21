@@ -1,0 +1,94 @@
+@import 'variables';
+
+.assets {
+  background-color: #000;
+  min-height: 80vh;
+  padding-bottom: 40px;
+  ul {
+    margin: 50px 0 0 40px;
+    list-style-type: none;
+    li {
+      a {
+        font-size: 35px;
+        font-family: 'avenir';
+      }
+    }
+  }
+}
+
+.nav-assets {
+  position: relative;
+  background: $gray;
+}
+
+// *************
+// Media queries
+// *************
+
+@media (min-width: 1680px) {
+  .assets {
+    ul {
+      margin: 80px 0 0 50px;
+      li {
+        margin-top: 25px;
+        a {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .assets {
+    ul {
+      margin-top: 90px;
+      li {
+        margin-top: 25px;
+        a {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2500px) {
+  .assets {
+    ul {
+      margin-top: 90px;
+      li {
+        margin-top: 25px;
+        a {
+          font-size: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .assets {
+    ul {
+      li {
+        margin-top: 15px;
+        a {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .assets {
+    ul {
+      li {
+        margin-top: 15px;
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
