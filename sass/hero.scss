@@ -1,3 +1,5 @@
+@import 'variables';
+
 .hero {
   background-image: url('../img/floral-background.jpg');
   background-size: cover;
@@ -5,19 +7,19 @@
   min-height: 580px;
   overflow: hidden;
   border-bottom: 5px solid $yellow;
-  h1 {
-    font-family: 'chevalier', serif;
-    margin-top: 20px;
-    font-size: 80px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-  }
+  // h1 {
+  //   font-family: 'chevalier', serif;
+  //   margin-top: 20px;
+  //   font-size: 150px;
+  //   letter-spacing: 3px;
+  //   text-transform: uppercase;
+  // }
   h2 {
     font-family: 'Times New Roman';
     letter-spacing: 6px;
     font-weight: normal;
-    font-size: 42px;
-    margin-top: 200px;
+    font-size: 70px;
+    margin-top: 170px;
   }
   img {
     width: 525px;
