@@ -1,5 +1,9 @@
 <?php
-if(isset($_POST['submit'])){
+
+if(isset($_POST['submit']) == ''){
+
+}
+else{
     $to = "hm@brandedspiritsusa.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
@@ -923,6 +927,7 @@ if(isset($_POST['submit'])){
                 <input type="text" name="company">
                 <p>Company Type*</p>
                 <select class="small-input" name="companytype">
+                  <option value="" selected="selected">Select</option>
                   <option value="">Retailer</option>
                   <option value="">Distributor</option>
                   <option value="">Individual/Customer</option>
