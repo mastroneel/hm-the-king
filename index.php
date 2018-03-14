@@ -60,6 +60,7 @@ else{
         </script>
         <!-- end of store locator scripts -->
         <script type="text/javascript" src="js/ageVerify.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <title>HM the King</title>
       </head>
       <body>
@@ -940,6 +941,8 @@ else{
                 <input type="tel" name="phone">
                 <p>Message*</p>
                 <input type="text" name="message">
+                <p></p>
+            <div class="g-recaptcha" data-sitekey="6Ldyk0wUAAAAAMYGyuIrI-pGxlHpgseVDDEPWg36"></div>
                 <div class="button-container">
                   <button class="button" type="submit" name="submit">Submit</button>
                 </div>
