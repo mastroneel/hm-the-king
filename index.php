@@ -1,33 +1,57 @@
 <?php
+if(isset($_POST['submit']) && !empty($_POST['submit'])):
+    if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])):
+        //your site secret key
+        $secret = '6Ldyk0wUAAAAAB37-piqRNf_n67130OT_sY8pXG0';
+        //get verify response data
+        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+        $responseData = json_decode($verifyResponse);
+        if($responseData->success):
+            //contact form submission code
+            $name = !empty($_POST['name'])?$_POST['name']:'';
+            $email = !empty($_POST['email'])?$_POST['email']:'';
+            $message = !empty($_POST['message'])?$_POST['message']:'';
+            $company = !empty($_POST['company'])?$_POST['company']:'';
+            $companytype = !empty($_POST['companytype'])?$_POST['companytype']:'';
+            $phone = !empty($_POST['phone'])?$_POST['phone']:'';
 
-if(isset($_POST['submit']) == ''){
+            $to = 'hm@brandedspiritsusa.com';
+            $from = $_POST['email'];
+            $subject = 'New HM The King contact form submission';
+            $subject2 = 'Copy of your HM The King contact form submission';
+            $htmlContent = "
+                <h1>Contact request details</h1>
+                <p><b>Name: </b>".$name."</p>
+                <p><b>Email: </b>".$email."</p>
+                <p><b>Company Name: </b>".$company."</p>
+                <p><b>Company Type: </b>".$companytype."</p>
+                <p><b>Phone: </b>".$phone."</p>
+                <p><b>Message: </b>".$message."</p>
+            ";
+            // Always set content-type when sending HTML email
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            // More headers
+            $headers .= 'From:'.$name.' <'.$email.'>' . "\r\n";
+            //send email
+            @mail($to,$subject,$htmlContent,$headers);
+            @mail($from,$subject2,$htmlContent,$headers);
 
-}
-else{
-    $to = "hm@brandedspiritsusa.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $name = $_POST['name'];
-    $company = $_POST['company'];
-    $companytype = $_POST['companytype'];
-    $phone = $_POST['phone'];
-    $subject = "Form submission For HM the King";
-    $subject2 = "Copy of your HM the King form submission";
-    $message = "Full Name: " . $name ."\n\n".
-     "Company Name: " . $company ."\n\n".
-     "Company Type: ". $companytype ."\n\n".
-     "Phone Number: " . $phone . "\n\n" .
-     " Message: " . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $firstname . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    // You cannot use header and echo together. It's one or the other.
-    }
+            $succMsg = 'Your contact request have submitted successfully.';
+            echo "Mail Sent. Thank you " . $firstname . ", we will contact you shortly.";
+        else:
+            $errMsg = 'Robot verification failed, please try again.';
+        endif;
+    else:
+        echo "Please click on the reCAPTCHA box and try again.";
+        $errMsg = 'Please click on the reCAPTCHA box.';
+    endif;
+else:
+    $errMsg = '';
+    $succMsg = '';
+endif;
 ?>
+
 
 
 
@@ -921,32 +945,45 @@ else{
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-6">
-              <form action="" method="post">
-                <p>Your Name*</p>
-                <input type="text" name="name">
-                <p>Company Name*</p>
-                <input type="text" name="company">
-                <p>Company Type*</p>
-                <select class="small-input" name="companytype">
-                  <option value="" selected="selected">Select</option>
-                  <option value="">Retailer</option>
-                  <option value="">Distributor</option>
-                  <option value="">Individual/Customer</option>
-                  <option value="">Press/Media</option>
-                  <option value="">Other</option>
-                </select>
-                <p>Email Address*</p>
-                <input type="text" name="email">
-                <p>Phone Number*</p>
-                <input type="tel" name="phone">
-                <p>Message*</p>
-                <input type="text" name="message">
-                <p></p>
+          <form action="" method="POST">
+            <p>Your Name*</p>
+            <input type="text" name="name" value="" />
+            <p>Company Name*</p>
+            <input type="text" name="company" value="" />
+            <p>Company Type*</p>
+            <select class="small-input" name="companytype" value="">
+                <option value="" selected="selected">Select</option>
+                <option value="Retailer">Retailer</option>
+                <option value="Distributor">Distributor</option>
+                <option value="Individual/Customer">Individual/Customer</option>
+                <option value="Press/Media">Press/Media</option>
+                <option value="Other">Other</option>
+            </select>
+            <p>Email Address*</p>
+            <input type="text" name="email" value="" />
+            <p>Phone Number*</p>
+            <input type="tel" name="phone" value="" />
+            <p>Message*</p>
+            <input type="text" name="message">
+            <p></p>
             <div class="g-recaptcha" data-sitekey="6Ldyk0wUAAAAAMYGyuIrI-pGxlHpgseVDDEPWg36"></div>
-                <div class="button-container">
-                  <button class="button" type="submit" name="submit">Submit</button>
-                </div>
-              </form>
+            <p></p>
+            <input class="submit-button" type="submit" name="submit" value="submit">
+        </form>
+        <style>
+        .contact input.submit-button {
+          background-color: #232323;
+          border: 1px solid #232323;
+          border-radius: 3px;
+          color: #fff;
+          font-family: avenir,sans-serif;
+          font-size: 22px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-family: 'avenir', sans-serif;
+        }
+        </style>
             </div>
             <div class="col-xs-12 col-sm-4 address">
               <h3>Address</h3>
