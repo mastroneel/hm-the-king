@@ -947,9 +947,9 @@ endif;
             <div class="col-xs-12 col-sm-6">
               <form action="" method="POST">
                 <p>Your Name*</p>
-                <input type="text" name="name" value="" required />
+                <input type="text" name="name" value="" pattern=".{5,}\w*[a-zA-Z]\w*" required title="5 characters minimum" />
                 <p>Company Name*</p>
-                <input type="text" name="company" value="" required />
+                <input type="text" name="company" value="" pattern=".{3,}\w*[a-zA-Z]\w*" required title="3 characters minimum"  />
                 <p>Company Type*</p>
                 <select class="small-input" name="companytype" value="" required />
                     <option value="" selected="selected">Select</option>
@@ -960,11 +960,11 @@ endif;
                     <option value="Other">Other</option>
                 </select>
                 <p>Email Address*</p>
-                <input type="text" name="email" value="" required />
+                <input type="email" name="email" value="" pattern=".{5,}" required title="5 characters minimum"  />
                 <p>Phone Number*</p>
-                <input type="tel" name="phone" value="" required />
+                <input type="tel" name="phone" value="" pattern=".{10,}" required title="Please enter a 10 digit phone number"  />
                 <p>Message*</p>
-                <input type="text" name="message" required />
+                <input type="text" name="message" pattern=".{15,}\w*[a-zA-Z]\w*" required title="15 characters minimum" maxlength="400" />
                 <p></p>
                 <div class="g-recaptcha" data-sitekey="6Ldyk0wUAAAAAMYGyuIrI-pGxlHpgseVDDEPWg36"></div>
                 <p></p>

@@ -275,7 +275,7 @@
         <div class="hero">
           <div class="row">
             <div class="col-xs-12 col-md-6">
-              <h2>The perfect <br>blended scotch</h2>
+              <h2>The perfect <br>blend</h2>
             </div>
             <div class="col-xs-12 col-md-6">
               <img src="img/bottle.png">
@@ -322,7 +322,7 @@
               <br>
               <p>
                 Mellow vanilla and honey notes on the palate give way to a smooth and round
-                 aftertaste with subdued smoke and late peat. The beautiful bottle, a winner
+                 finish with subdued smoke and late peat. The beautiful bottle, a winner
                   of Queen Elizabeth’s Award for Design, mirrors the extraordinary Scotch
                    Whisky within.
               </p>
@@ -890,9 +890,9 @@
             <div class="col-xs-12 col-sm-6">
               <form action="php/mail_handler.php" method="POST">
                 <p>Your Name*</p>
-                <input type="text" name="name" value="" required />
+                <input type="text" name="name" value="" pattern=".{5,}\w*[a-zA-Z]\w*" required title="5 characters minimum" />
                 <p>Company Name*</p>
-                <input type="text" name="company" value="" required />
+                <input type="text" name="company" value="" pattern=".{3,}\w*[a-zA-Z]\w*" required title="3 characters minimum"  />
                 <p>Company Type*</p>
                 <select class="small-input" name="companytype" value="" required />
                     <option value="" selected="selected">Select</option>
@@ -903,11 +903,11 @@
                     <option value="Other">Other</option>
                 </select>
                 <p>Email Address*</p>
-                <input type="text" name="email" value="" required />
+                <input type="email" name="email" value="" pattern=".{5,}" required title="5 characters minimum"  />
                 <p>Phone Number*</p>
-                <input type="tel" name="phone" value="" required />
+                <input type="tel" name="phone" value="" pattern=".{10,}" required title="Please enter a 10 digit phone number"  />
                 <p>Message*</p>
-                <input type="text" name="message" required />
+                <input type="text" name="message" pattern=".{15,}\w*[a-zA-Z]\w*" required title="15 characters minimum" maxlength="400" />
                 <p></p>
                 <div class="g-recaptcha" data-sitekey="6Ldyk0wUAAAAAMYGyuIrI-pGxlHpgseVDDEPWg36"></div>
                 <p></p>

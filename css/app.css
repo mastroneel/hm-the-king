@@ -8701,7 +8701,8 @@ p {
     padding: 0;
     margin: 0;
     background-size: cover;
-    background-position: center top; }
+    background-position: center top;
+    cursor: pointer; }
     .cocktails .cocktail-pic-1 .image-overlay,
     .cocktails .cocktail-pic-2 .image-overlay,
     .cocktails .cocktail-pic-3 .image-overlay,
@@ -8719,7 +8720,8 @@ p {
       width: 100%;
       height: 100%;
       padding-top: 30%;
-      transition: 0.5s; }
+      transition: 0.5s;
+      cursor: pointer; }
       .cocktails .cocktail-pic-1 .image-overlay p,
       .cocktails .cocktail-pic-2 .image-overlay p,
       .cocktails .cocktail-pic-3 .image-overlay p,
@@ -8747,7 +8749,8 @@ p {
     .cocktails .cocktail-pic-11:hover .image-overlay,
     .cocktails .cocktail-pic-12:hover .image-overlay {
       opacity: 1;
-      transition: 0.5s; }
+      transition: 0.5s;
+      cursor: pointer; }
   .cocktails .cocktail-pic-1 {
     background-image: url("../img/northern-lights.jpg"); }
   .cocktails .cocktail-pic-2 {
