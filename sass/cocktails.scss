@@ -238,7 +238,7 @@
           text-align: center;
           img {
             width: 50%;
-            margin-top: -15%;
+            // margin-top: -15%;
           }
           h4 {
             font-size: 1.5em;
@@ -290,14 +290,13 @@
   .cocktails {
     .modal-dialog {
       .modal-content {
-        padding: 15px;
+        padding: 10px;
         .modal-body {
           h4 {
             font-size: 18px;
           }
           img {
             width: 90%;
-            margin-top: -15%;
           }
           ul, ol {
             font-size: 0.9em;

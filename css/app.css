@@ -8867,8 +8867,7 @@ p {
     .cocktails .modal-dialog .modal-content .modal-body {
       text-align: center; }
       .cocktails .modal-dialog .modal-content .modal-body img {
-        width: 50%;
-        margin-top: -15%; }
+        width: 50%; }
       .cocktails .modal-dialog .modal-content .modal-body h4 {
         font-size: 1.5em; }
       .cocktails .modal-dialog .modal-content .modal-body ul, .cocktails .modal-dialog .modal-content .modal-body ol {
@@ -8886,12 +8885,11 @@ p {
     width: 90%; } }
 @media (max-width: 435px) {
   .cocktails .modal-dialog .modal-content {
-    padding: 15px; }
+    padding: 10px; }
     .cocktails .modal-dialog .modal-content .modal-body h4 {
       font-size: 18px; }
     .cocktails .modal-dialog .modal-content .modal-body img {
-      width: 90%;
-      margin-top: -15%; }
+      width: 90%; }
     .cocktails .modal-dialog .modal-content .modal-body ul, .cocktails .modal-dialog .modal-content .modal-body ol {
       font-size: 0.9em; } }
 @media (max-width: 992px) {
